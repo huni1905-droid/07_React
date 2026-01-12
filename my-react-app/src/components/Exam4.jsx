@@ -14,6 +14,7 @@ const Exam4 = () => {
   // id 상태값을 업데이트 해주는 함수
   const onChangeId = (e) => {
     setId(e.target.value);
+    // <input />에 작성된 value 값으로 update 하겠다.
   }
 
   // pw 상태값을 업데이트 해주는 함수
@@ -25,7 +26,10 @@ const Exam4 = () => {
     <div>
       {/* 자식 컴포넌트에게 사용중인 함수들을 props 통해 전달 */}
       <Id onChangeId={onChangeId} />
+      {/* 좌변인onChangeId라는 key에다가 {onChangeId} 함수 전달
+          key의 경우 다른 이름을 사용해도 된다 */}
       <Pw onChangePw={onChangePw} />
+      {/* 자식의 Id, Pw 호출 */}
       <div>
         {/* 자식이 가진 id, pw라는 상태값을 부모 컴포넌트가 알 방법이 없음!
           -> 부모 컴포넌트로 자식의 상태,함수를 끌어올려 사용
@@ -44,7 +48,11 @@ const Id = (props) => {
     <div>
       <label>ID : </label>
       <input onChange={props.onChangeId} />
-      {/* onChange : 변화가 일어날 때 마낟 나타나는 함수 */}
+      {/* onChange : 변화가 일어날 때 마낟 나타나는 함수 
+          {props.onChangeId}에서 onChangeId는 
+          <Id onChangeId={onChangeId} />의 key인 좌변 onChangeId와 같아야 한다
+          함수 이름이 아니라 전달된 key여야 한다
+      */}
     </div>
   ) 
 }

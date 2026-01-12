@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
 // 함수형 컴포넌트 예제
-const Exam2 = (props) => { // 매개변수 자리 : {mihyun, test}
+const Exam2 = (props) => { // 매개변수 자리 : {jihun, test}
+                           // 부모인 App.jsx로 부터 물려받은 값 {jihun, test}
   // 상태 정의
   const [count, setCount] = useState(0);
   // useState(0) : Hook : 클래스형 컴포넌트에서 사용할수 있었던것을(ex.생성자 정의)이 

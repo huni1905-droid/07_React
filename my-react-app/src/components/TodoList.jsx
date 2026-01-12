@@ -70,11 +70,31 @@ const TodoList = () => {
     <div>
       <h1>나의 TodoList</h1>
       <input value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+      {/* value={inputValue} : inputValue라는 현재 상태의 값을 input창에 띄워주는 역할
+        onChange : input 창에 작성될때마다 update해주는 이벤트 핸들러
+      */}
       <button onClick={handleAddTodo}>Add Todo</button>
 
       <ul>
         {todoList.map((todo, index) => (
-          <li key={index}>
+          /*
+            todoList: 데이터 배열 형태
+            .map(): "배열 안에 있는 것들을 하나씩 꺼내서 함수를 실행해줘!"라는 명령입니다.
+
+            콜백함수 {todoList.map(() => **여기** )} 에서 
+            1. 한줄일때 / 여러줄 일때 - 중괄호{}가 있으면 
+                {todoList.map(() => {
+                  return (  <></>  ) 
+                })}와 같이  return () 안에 jsx 문법 써야한다
+            2. 한줄 이면 {todoList.map(() => <li></li> )} 와 같이 써주면 된다
+            3. 한줄일때 / 여러줄 일때 - {}와 return 생략 -> 대신 소괄호()
+                {todoList.map(() => (
+                  <></>
+                ))} 와 같이 return 없이 ()안에 jsx 문법 써야한다
+          */
+          <li key={index}> 
+            {/* key={index} 없어도 작동은 하지만 console 창에 에러 뜬다 */}
+
             <span style={{ textDecoration : todo.isDone ? "line-through" : "none" }}>{todo.title}</span>
             <button onClick={() => handleToggleTodo(index)}>{todo.isDone ? '미완료' : '완료'}</button>
             <button onClick={() => handleDeleteTodo(index)}>삭제</button>
