@@ -7,6 +7,8 @@ import Exam2 from './components/Exam2'
 import Exam3 from './components/Exam3'
 import Exam4 from './components/Exam4'
 import Exam5 from './components/Exam5'
+import Exam6 from './components/Exam6'
+import Exam7 from './components/Exam7'
 
 function App() {
   // js 주석 사용 가능 
@@ -32,8 +34,10 @@ function App() {
         App이라는 부모가 Exam1이라는 자식에게 물려주는 값(데이터) : jihun="hello"
                                                     상태 : jihun={showExam}                             
       */}
-      <Exam5 />
-
+      {/* <Exam5 /> */}
+      {/* <TodoList /> */}
+      
+      <Exam7 />
     </>
   )
 }
