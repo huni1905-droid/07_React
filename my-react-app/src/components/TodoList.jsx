@@ -11,7 +11,7 @@ const TodoList = () => {
 
   // Add Todo 버튼 클릭 시 todoList 상태에 새로운 할 일을 업데이트 이벤트 핸들러 함수
   const handleAddTodo = () => {
-    // Javascript spread(전개) 연산자 (...)
+    // Javascript spread(전개) 연산자(Operator) (...)
     // : 배열이나 객체같이 여러 데이터가 모여있는 형태를 낱개로 뿌려주는(펼쳐주는) 기능
     /* 
     const 과일 = ["사과", "바나나"];
@@ -31,6 +31,7 @@ const TodoList = () => {
    setInputValue(""); // input 창 값 비우기
   }
 
+
   // 완료/미완료 상태 업데이트 이벤트 핸들러 함수
   const handleToggleTodo = (index) => {
     // todoList 이런상태
@@ -40,8 +41,8 @@ const TodoList = () => {
     */
     const newTodoList = todoList.map((todo, i) => 
       i === index ? { ...todo, isDone : !todo.isDone } : todo
-      // 현재 배열의 i와 매개변수 index가 같으면
-      // isDone값을 반대값으로 변경한 내용으로 사용, 
+      // 현재 배열의 i(지금 보고있는 할일)와 매개변수 index(내가 클릭한 할 일)가 같으면
+      // todo에서 isDone값을 반대값(true <-> false)으로 변경한 내용으로 사용, 
       // 같지 않으면 기존 todo를 그대로 적용하여
       // 새로운 배열을 만들어 반환(map 사용)
     );
@@ -49,6 +50,7 @@ const TodoList = () => {
     setTodoList(newTodoList); // 새로 만들어진 배열을 상태에 전달(불변성 법칙 지킴)
 
   }
+
 
   // todoList에 있는 요소를 삭제하는 이벤트 핸들러 함수
   const handleDeleteTodo = (index) => {

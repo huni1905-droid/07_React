@@ -35,8 +35,8 @@ function App() {
         App이라는 부모가 Exam1이라는 자식에게 물려주는 값(데이터) : jihun="hello"
                                                     상태 : jihun={showExam}                             
       */}
-      <Exam3 />
-      {/* <TodoList /> */}
+      {/* <Exam3 /> */}
+      <TodoList />
       
       {/* <Exam7 /> */}
     </>

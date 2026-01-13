@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import '../css/DashBoard.css';
-import Restore from './Restore.js';
-import Manager from './Manager.js';
-import Statistics from './Statistics.js';
+import Restore from './Restore.jsx';
+import Manager from './Manager.jsx';
+import Statistics from './Statistics.jsx';
+import { AuthContext } from './AuthContext.jsx';
 
 export default function DashBoard() {
+  const globalState = useContext(AuthContext);
 
   return (
       <div className='dash-board-container'>
         <h1>관리자 페이지</h1>
 
         <div className='admin-info'>
-          <p>현재 접속 관리자 : </p>
-          <button>로그아웃</button>
+          <p>현재 접속 관리자 : {globalState.user.memberNickname}</p>
+          <button onClick={globalState.handleLogout}>로그아웃</button>
         </div>
 
         <ul className='tab-box'>
