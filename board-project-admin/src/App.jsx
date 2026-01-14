@@ -26,6 +26,7 @@ function AppComponent() {
 
   return (
     <>
+      {/* user ? (로그인을 했을때 렌더링할 UI) : (로그인을 안했을 때 렌더링할 UI)) */}
       { user ? 
         (
           <div className='body-container'>
@@ -42,6 +43,7 @@ function AppComponent() {
       : (
         <div className='login-section'>
           <Login />
+          {/* import가 안 될때는 해당 컴포넌트가 export되고있는지 부터 확인한다. */}
         </div>
       )}
     </>

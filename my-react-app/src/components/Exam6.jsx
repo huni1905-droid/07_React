@@ -22,6 +22,7 @@ const Exam6 = () => {
   // Context.Provider : 하위 컴포넌트에게 데이터를 전달할 때(제공할 때) 사용
   return (
     <UserContext.Provider value={{ user, test:"test값 입니다."}}> 
+    {/*                      key : user , key : test value : "test값 입니다." */}
     {/* UserContext의 제공자로 이용하겠다. 
     상태값(user) 뿐만 아니라 여기서 만들어진 데이터값(test:"test값 입니다.")도 넣어줄 수 있다
     감싸고 있는 모든 자식들에게 모두 제공하겠다
@@ -52,7 +53,7 @@ const Child2 = () => {
   return(
     <>
       <h1>Child2 : {contextValue.user} / {contextValue.test}</h1> 
-      {/* 24버째 줄처럼 넣어놨다. */}
+      {/* contextValue.(key값)으로 부른다 -> 25번쨰 줄의 key를 넣는다. */}
       <Child3 />
     </>
   )
