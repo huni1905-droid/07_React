@@ -21,9 +21,10 @@ function App() {
     // return 구문 안에는 js 주석 사용 가능 (태그 밖에서는)
     // js 단일 주석
     /* js 범위 주석 */
+
     // <></> : fragment (html 역할 x, 특별히 감쌀 태그 없을때 사용하면 된다)
     <>
-      {/* jsx 주석 */}
+      {/* jsx 주석 - 단축키 : ctrl + /  */}
       {/* 태그 안에서는 jsx주석 사용해야 한다.  */}
       {/* <h1>안녕하세요</h1>
       <button onClick={ () => setShowExam(!showExam)}>클릭</button>
