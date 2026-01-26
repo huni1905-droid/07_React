@@ -10,6 +10,7 @@ import logo from "../assets/logo.jpg";
 
 // react-router-dom : React 애플리케이션에서 라우팅을 구현하기 위해 사용하는 라이브러리(설치필요)
 // 라우팅(Routing) : 사용자가 요청한 URL 경로에 따라 적절한 페이지나 자원을 제공하는 과정
+// 라우팅하려는 컴포넌트를 <BrowserRouter>로 감싸야 한다. App.jsx 참고
 export default function DashBoard() {
   const globalState = useContext(AuthContext);
   const navigate = useNavigate();
@@ -45,7 +46,10 @@ export default function DashBoard() {
         <NavLink to="/manager">관리자 메뉴</NavLink>
       </div>
 
-      {/* Route를 이용하여 각 URL에 맞는 컴포넌트를 연결 */}
+      {/* Route를 이용하여 각 URL에 맞는 컴포넌트를 연결 
+          <Routes> : <Route>가 여러개 모인것 감싸는 테그
+          둘 다 임포트 되어있어야 한다. 
+      */}
       <Routes>
         <Route path='/' element={<Chart />} ></Route>
         <Route path='/statistics' element={<Statistics />} ></Route>

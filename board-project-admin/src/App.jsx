@@ -34,6 +34,12 @@ function AppComponent() {
               BrowserRouter : React앱에서 URL 경로에 따라
               컴포넌트를 보여줄 수 있게 해주는 라우팅 컨테이너(라우팅이 적용될 부분의 최상위 부모 컴포넌트)
               -> Route, Link, NavLink, useNavigate() 등 같은 라우팅 관련 기능을 사용할 수 있다.
+              (Route, Link, NavLink, useNavigate() 등을 이용할 컴포넌트가 <DashBoard />이기때문에 
+              <DashBoard />를 <BrowserRouter>로 감싸줘야한다. & 임포트까지 잘 되어야한다.)
+              Link : 클릭할때마다 URL 바꾸는 기능
+              NavLink : 지금 내가 들어와져 있는 주소에 NavLink에 연결해둔 to 속성이 일치하면 
+                        거기에 active 클래스를 자동으로 추가해줌 ->  css에 active 추가해주면 색 변한다.
+                        cf) DashBoard.css 125번째 줄 .router-tab-box a.active{~~}
             */}
             <BrowserRouter>
               <DashBoard />
