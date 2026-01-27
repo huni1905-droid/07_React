@@ -12,6 +12,13 @@ function App() {
       <AppComponent />
     </AuthProvider>
   )
+  /* 
+  react에서는 컴포넌트를 자잘자잘하게 잘 쪼개는 것이 중요!
+  App과 AppComponent로 쪼개는 이유 코드를 깔끔해게하기 위해서. 
+  나중에 Context객체가 바뀌어서 AuthProvider가 아닌 다른 Provider쓰고싶을때
+  App쪽에서만 바꿔주면 되기 때문에(AppComponent에서 일일이 바꿔줄 필요 없어서)
+  */ 
+
 }
 
 function AppComponent() {

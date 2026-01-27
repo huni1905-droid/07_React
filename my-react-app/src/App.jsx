@@ -37,9 +37,9 @@ function App() {
                                                     상태 : jihun={showExam}                             
       */}
       {/* <Exam3 /> */}
-      <TodoList />
+      {/* <TodoList /> */}
       
-      {/* <Exam7 /> */}
+      <Exam6 />
     </>
   )
 }
