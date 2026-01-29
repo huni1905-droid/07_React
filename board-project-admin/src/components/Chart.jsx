@@ -53,14 +53,14 @@ function Chart() {
       date: "2025.01.06",
       in: "39",
       out: "1",
-      visitor: "70",
+      visitor: "30",
     },
     {
       name: "신규,이탈,접속현황",
       date: "2025.01.07",
       in: "50",
       out: "6",
-      visitor: "30",
+      visitor: "10",
     },
   ];
 

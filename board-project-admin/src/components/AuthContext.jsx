@@ -22,10 +22,10 @@ export const AuthProvider = ({ children }) => {
   const [password, setPassword] = useState("");
   // *** Login화면에서 사용될 값들이 왜 Authcontext에 정의되어 있는가? **
   // 로그인 자체를 AuthProvider에서 해야되. 
-  // 왜냐하면 로그인한 회원의 정보를 전역적ㄴ으로 user라는 애가 작고있어야되
+  // 왜냐하면 로그인한 회원의 정보를 전역적으로 user라는 애가 잡고있어야되
   // 로그인한 회원 정보인 user라는 애를 Context에 실어줘서 전역적으로 상태 설정을 해놔야만 
   // 모든 컴포넌트에서 이 값을 이용할 수 있기 때문에 AuthProvider에서 만들었어
-  // 나중에 setUser를 통해 현제 로그인한 회원 정보를 세팅할거야
+  // 나중에 setUser를 통해 현재 로그인한 회원 정보를 세팅할거야
   // 현재 이메일과 비밀번호를 서버쪽으로 넘겨줘야 DB로 가서 일치하는 회원 조회해서 갖고오니깐.
   // -> email과 password가 AuthProvider에서 필요해
   // React는 단방향으로 데이터 전달할 수 있어 
